@@ -1,0 +1,24 @@
+# =========================================
+# DATASET DOWNLOAD LINKS
+# Project: Credit Card Fraud Detection
+# =========================================
+
+# 1. Train Identity Dataset
+# Description: Contains identity information for each transaction (e.g., device info, IP, etc.)
+# File Size: ~25 MB
+# Download Link:
+https://drive.google.com/file/d/1eoLG7V816cAgPXhwXICxOuAWMzSslZv7/view?usp=sharing
+
+
+# 2. Train Transaction Dataset
+# Description: Contains transaction-level data including features and target variable.
+# File Size: ~700 MB
+# Download Link:
+https://drive.google.com/file/d/1GELeAjPathMHR3cf5u2tDe0WUjTbdipU/view?usp=sharing
+
+
+# =========================================
+# Notes:
+# - Please ensure both datasets are downloaded before running notebooks.
+
+# =========================================
