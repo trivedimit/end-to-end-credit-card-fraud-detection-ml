@@ -46,11 +46,10 @@ The goal is to build a model that can **accurately detect frauds** while minimiz
 - **Imbalance ratio:** ~3.50% fraud cases  
 - **Shape:** `(590540, 434)`
 
-## Data Folder
+### Data Folder
 
 This project uses two datasets that are hosted externally on Google Drive.
 
-### Datasets
 
 | File | Description | Size | Download Link |
 |------|--------------|------|----------------|
