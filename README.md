@@ -37,7 +37,7 @@ The goal is to build a model that can **accurately detect frauds** while minimiz
 ---
 <h2><a class="anchor" id="dataset"></a>Dataset</h2>
 
-- Couple of CSV files located in `/data/` folder (train_identity,train_transaction)
+- Couple of CSV files(link) located in `/data/` folder (train_identity,train_transaction)
 - **Records:** 590,000+ transactions  
 - **Features:**  
   - `Time`, `Amount` — Transaction-level details  
@@ -45,6 +45,23 @@ The goal is to build a model that can **accurately detect frauds** while minimiz
   - `Class` — Target variable (1 = Fraud, 0 = Legitimate)  
 - **Imbalance ratio:** ~3.50% fraud cases  
 - **Shape:** `(590540, 434)`
+
+# Data Folder
+
+This project uses two datasets that are hosted externally on Google Drive.
+
+### Datasets
+
+| File | Description | Size | Download Link |
+|------|--------------|------|----------------|
+| `train_identity.csv` | Identity information for transactions | ~25 MB | [Google Drive Link](https://drive.google.com/file/d/1eoLG7V816cAgPXhwXICxOuAWMzSslZv7/view?usp=sharing) |
+| `train_transaction.csv` | Main transaction data for fraud detection | ~700 MB | [Google Drive Link](https://drive.google.com/file/d/1GELeAjPathMHR3cf5u2tDe0WUjTbdipU/view?usp=sharing) |
+
+---
+
+### 📥 How to Use
+1. Download both files using the links above.
+2. Place them inside the folder `data/` (create it if it doesn’t exist).
 
 ---
 
