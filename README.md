@@ -137,25 +137,24 @@ Trained multiple models and compared performance:
 
 ### Baseline Models
 
-| Model | Accuracy | ROC AUC | Recall | Notes |
-|----------------------------|----------|---------|--------|----------------------------|
-| Logistic Regression (LR) | 0.79 | 0.81 | 0.31 | Baseline simple model |
-| XGBoost Classifier (XGB) | 0.980 | 0.931 | 0.48 | Tuned with early stopping |
-| LightGBM Classifier (LGBM Base) | 0.9774 | 0.9239 | 0.4168 | Fast, default parameters |
-| Random Forest Classifier (RFC) | 0.9792 | 0.9295 | 0.4327 | Ensemble baseline |
-| LightGBM Classifier (Calibrated) | 0.9804 | 0.945 | 0.5041 | ✅ Best overall performance |
+| Model | Accuracy | ROC AUC | Recall | F1 Score | Notes |
+|----------------------------|----------|---------|--------|---------|----------------------------|
+| Logistic Regression  | 0.9649 | 0.6991 | 0.0002 | 0.0000 | Baseline simple model |
+| XGBoost Classifier  | 0.9801 | 0.9363 | 0.4827 | 0.63 | Tuned with early stopping |
+| LightGBM Classifier (LGBM Baseline) | 0.9774 | 0.9239 | 0.4168 | 0.56 | ✅ Best overall performance |
+| Random Forest Classifier  | 0.9792 | 0.9295 | 0.4327 | 0.59 | Ensemble baseline |
 
 ---
 
 ### LightGBM Model Optimization & Enhancements
 
-| Model | Accuracy | ROC AUC | Recall | Notes |
-|-------------------------------|----------|---------|--------|-------------------------------------|
-| LGBM + Random Oversampling (ROS) | 0.975 | 0.94 | 0.55 | Handles class imbalance |
-| LGBM + Cost-Sensitive Learning | 0.978 | 0.945 | 0.58 | Class weight balancing applied |
-| Calibrated CV LGBM (Cost-Sensitive) | 0.979 | 0.948 | 0.59 | Probability calibration added |
-| Hyperparameter Tuned LGBM | 0.981 | 0.951 | 0.60 | Optimized via grid/Bayesian search |
-| Calibrated CV Hyperparameter Tuned LGBM | 0.982 | 0.953 | 0.61 | ✅ Best tuned & calibrated model |
+| Model | Accuracy | ROC AUC | Recall | F1 Score | Notes |
+|-------------------------------|----------|---------|--------|---------|-------------------------------------|
+| LGBM + Random Oversampling | 0.8851 | 0.9270 | 0.8145 | 0.33 | Handles class imbalance |
+| LGBM + Cost Sensitive Learning | 0.8862 | 0.9271 | 0.8126 | 0.33 | Class weight balancing applied |
+| Calibrated CV LGBM (Cost-Sensitive) | 0.9781 | 0.9293 | 0.4489 | 0.59 | Probability calibration added |
+| Hyperparameter Tuned LGBM | 0.9796 | 0.9439 | 0.4659 | 0.62 | Optimized via grid/Bayesian search |
+| Calibrated CV Hyperparameter Tuned LGBM | 0.9804 | 0.9456 | 0.5041 | 0.65 | ✅ Best tuned & calibrated model |
 
 
 ---
