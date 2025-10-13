@@ -135,13 +135,28 @@ CREDIT_CARD_FRAUD_DETECTION/
 ### 4️⃣ Model Building
 Trained multiple models and compared performance:
 
-| Model                    | Accuracy   | ROC AUC    | Recall        | Notes                        |
-|--------------------------|------------|------------|---------------|------------------------------|
-| Logistic Regression      |  0.79      | 0.81       | 0.31          | Baseline                     | 
-| XGBoost                  |  0.980     | 0.931      | 0.48          | Tuned with early stopping    |
-| **LightGBM (base)**      | **0.9774** | **0.9239** | **0.4168**    | Very Fast                    |
-| RandomForest Regressiom  |  0.9792    | 0.9295     | 0.4327        | Tuned with early stopping    |
-| **LightGBM (Calibrated)**| **0.9804** | **0.945**  | **0.5041**    | ✅ Best overall performance  |
+### Baseline Models
+
+| Model | Accuracy | ROC AUC | Recall | Notes |
+|----------------------------|----------|---------|--------|----------------------------|
+| Logistic Regression (LR) | 0.79 | 0.81 | 0.31 | Baseline simple model |
+| XGBoost Classifier (XGB) | 0.980 | 0.931 | 0.48 | Tuned with early stopping |
+| LightGBM Classifier (LGBM Base) | 0.9774 | 0.9239 | 0.4168 | Fast, default parameters |
+| Random Forest Classifier (RFC) | 0.9792 | 0.9295 | 0.4327 | Ensemble baseline |
+| LightGBM Classifier (Calibrated) | 0.9804 | 0.945 | 0.5041 | ✅ Best overall performance |
+
+---
+
+### LightGBM Model Optimization & Enhancements
+
+| Model | Accuracy | ROC AUC | Recall | Notes |
+|-------------------------------|----------|---------|--------|-------------------------------------|
+| LGBM + Random Oversampling (ROS) | 0.975 | 0.94 | 0.55 | Handles class imbalance |
+| LGBM + Cost-Sensitive Learning | 0.978 | 0.945 | 0.58 | Class weight balancing applied |
+| Calibrated CV LGBM (Cost-Sensitive) | 0.979 | 0.948 | 0.59 | Probability calibration added |
+| Hyperparameter Tuned LGBM | 0.981 | 0.951 | 0.60 | Optimized via grid/Bayesian search |
+| Calibrated CV Hyperparameter Tuned LGBM | 0.982 | 0.953 | 0.61 | ✅ Best tuned & calibrated model |
+
 
 ---
 
